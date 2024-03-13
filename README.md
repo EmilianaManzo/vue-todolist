@@ -23,13 +23,14 @@ Bonus:
 ## SVOLGIMENTO: 
 1. per stampare in pagina creo un ciclo v-for che mi restituirà l'elemento e l'indice 
 2. aggiungo al il v.bind alla classe con la condizione (se isDone = true allora sarà aggiunta la classe)
-3. creo una funzione che chiamo deleteTask nella quale, grazie a splice, cancello l'elemento selezionato dall'array e la richiamo al click sul cestino
-4. inizializzo un nuovo oggetto con due elementi, text e isDone
-5. creo una funzione addTask per aggiungere la nuova task all'array utilizzando unshift per metterlo all'inizio dell'array 
-6. richiamo nella funzione l'oggetto per pulire il campo di input
-7. creo l'evento click al bottone e richiamo la funzione addTask 
-8. creo l'evento keyup.enter al campo input e richiamo la funzione
-9. aggiungo al campo input il v-model per 'ricevere' il testo inserito e aggiungo .trim per far cancellare gli spazi prima e dopo la stringa
+3. al click del li isDone diventa il suo opposto
+4. creo una funzione che chiamo deleteTask nella quale, grazie a splice, cancello l'elemento selezionato dall'array e la richiamo al click sul cestino
+5. inizializzo un nuovo oggetto con due elementi, text e isDone
+6. creo una funzione addTask per aggiungere la nuova task all'array utilizzando unshift per metterlo all'inizio dell'array 
+7. richiamo nella funzione l'oggetto per pulire il campo di input
+8. creo l'evento click al bottone e richiamo la funzione addTask 
+9. creo l'evento keyup.enter al campo input e richiamo la funzione
+10. aggiungo al campo input il v-model per 'ricevere' il testo inserito e aggiungo .trim per far cancellare gli spazi prima e dopo la stringa
 
 ### BONUS 1
 1. Creo un controllo con if per controllare se la stringa inserita dall'utente è lunga almeno 4 caratteri.
@@ -43,7 +44,7 @@ Bonus:
 
 
 ### BONUS 3
-1. utilizzando il valore true di isDone tramite un ciclo if la funzione delete task funzionerà o meno 
+1. prima parte fatta nel punto 3 dello svolgimento
 2. aggiungo al'evento click del trash .stop per inibire la propagazione della funzione (letto nella documentazione di vue) 
 
 

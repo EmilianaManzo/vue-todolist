@@ -62,11 +62,12 @@ createApp({
         this.newText= '';
       }
 
-    }, 
-
-    toggleClass(indice){
-        this.todoList[indice].isDone = !this.todoList[indice].isDone
     }
+
+    // ho eliminato funzione perchè il mio ragionamento fatto precedentemente nel click del li a riga 44 era giusto, ma non tornava indietro perchè avevo dimenticato il .this 
+    // toggleClass(indice){
+    //     this.todoList[indice].isDone = !this.todoList[indice].isDone
+    // }
 
   },
 
