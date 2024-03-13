@@ -39,12 +39,13 @@ Bonus:
 
 
 ### BONUS 2
-1. 
+1. creo una nuova funzione toggleClass che inverte il valore booleano di isDone, che sarà sfruttato per inserire la classe done.
 
 
 ### BONUS 3
-1. 
+1. utilizzando il valore true di isDone tramite un ciclo if la funzione delete task funzionerà o meno 
+2. aggiungo al'evento click del trash .stop per inibire la propagazione della funzione (letto nella documentazione di vue) 
 
 
 ### BONUS 4
-1. 
+1. con un v-if e un v-else scelgo cosa visualizzare 

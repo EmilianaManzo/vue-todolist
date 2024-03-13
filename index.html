@@ -40,13 +40,15 @@
     </div>
 
     <div class="task-container">
-      <ul>
-        <li v-for ="(task, indice) in todoList" @click="task.isDone = !isDone">
+      <ul v-if="todoList.length > 0">
+        <li v-for ="(task, indice) in todoList" @click="toggleClass(indice)">
         <span :class=" {'done' : task.isDone}">{{task.text}}</span>
-          <i class="fa-solid fa-trash-can" @click="deleteTask(indice)"></i>
+        <!-- capire bene come funziona .stop  -->
+          <i class="fa-solid fa-trash-can" @click.stop="deleteTask(indice)"></i>
         </li>
       </ul>
 
+      <h1 v-else>Hai finito le tue tasks! Brav ja!</h1>
     </div>
 
 

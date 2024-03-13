@@ -76,3 +76,7 @@ img{
 .task-container li span.done{
   text-decoration: line-through;
 }
+
+h1{
+  text-align: center;
+}

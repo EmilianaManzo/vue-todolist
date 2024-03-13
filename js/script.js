@@ -37,8 +37,11 @@ createApp({
   methods : {
   
     deleteTask(indice){
-      this.todoList.splice(indice,1)
-      
+      if (this.todoList[indice].isDone){
+        this.todoList.splice(indice,1)
+      }else{
+        this.error
+      }
     },
     
     addTask(){
@@ -59,6 +62,10 @@ createApp({
         this.newText= '';
       }
 
+    }, 
+
+    toggleClass(indice){
+        this.todoList[indice].isDone = !this.todoList[indice].isDone
     }
 
   },
