@@ -16,7 +16,7 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css' integrity='sha512-FA9cIbtlP61W0PRtX36P6CGRy0vZs0C2Uw26Q1cMmj3xwhftftymr0sj8/YeezDnRwL9wtWw8ZwtCiTDXlXGjQ==' crossorigin='anonymous'/>
 
   <!-- Custom CSS  -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <title>Vue Todo List</title>
 </head>
@@ -25,35 +25,26 @@
   <div id="app" class="container">
 
     <div class="logo">
-      <img src="img/logo.png" alt="logo">
+      <img src="assets/img/logo.png" alt="logo">
     </div>
 
     <div class="new-task">
 
-      <input  placeholder="Nuovo task"type="text">
-      <button >Aggiungi</button>
+      <input
+        placeholder="Nuovo task"
+        type="text"
+        v-model.trim="newTask.newText"
+        @keyup.enter="addTask">
+      <button @click="addTask">Aggiungi</button>
       <p class="error"></p>
     </div>
 
     <div class="task-container">
       <ul>
-        <li>
-          <span>task....</span>
+        <li v-for ="(task, indice) in todoList" @click="task.isDone = !isDone">
+        <span :class=" {'done' : task.isDone}">{{task.text}}</span>
           <i class="fa-solid fa-trash-can"></i>
         </li>
-        <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-
       </ul>
 
     </div>
