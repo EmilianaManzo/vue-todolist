@@ -23,7 +23,7 @@ createApp({
       ],
       
       newTask : {
-        newText : '',
+        text : '',
         isDone :false
       },
 
@@ -36,6 +36,7 @@ createApp({
     addTask(){
       this.todoList.unshift(this.newTask)
       console.log(this.todoList)
+      
       this.newTask= ''
       
     }
