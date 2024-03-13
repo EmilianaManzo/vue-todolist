@@ -21,4 +21,30 @@ Bonus:
 
 
 ## SVOLGIMENTO: 
+1. per stampare in pagina creo un ciclo v-for che mi restituirà l'elemento e l'indice 
+2. aggiungo al il v.bind alla classe con la condizione (se isDone = true allora sarà aggiunta la classe)
+3. creo una funzione che chiamo deleteTask nella quale, grazie a splice, cancello l'elemento selezionato dall'array e la richiamo al click sul cestino
+4. inizializzo un nuovo oggetto con due elementi, text e isDone
+5. creo una funzione addTask per aggiungere la nuova task all'array utilizzando unshift per metterlo all'inizio dell'array 
+6. richiamo nella funzione l'oggetto per pulire il campo di input
+7. creo l'evento click al bottone e richiamo la funzione addTask 
+8. creo l'evento keyup.enter al campo input e richiamo la funzione
+9. aggiungo al campo input il v-model per 'ricevere' il testo inserito e aggiungo .trim per far cancellare gli spazi prima e dopo la stringa
+
+### BONUS 1
+1. Creo un controllo con if per controllare se la stringa inserita dall'utente è lunga almeno 4 caratteri.
+2. creo inizializzo un elemento che userò pper il v-model dell'input
+3. all'interno della funzione addTask all'interno dell'oggetto associo text all'elemento inizializzato in precedenza
+4. faccio il controllo 
+
+
+### BONUS 2
+1. 
+
+
+### BONUS 3
+1. 
+
+
+### BONUS 4
 1. 

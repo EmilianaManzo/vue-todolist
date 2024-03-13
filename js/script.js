@@ -27,20 +27,42 @@ createApp({
         isDone :false
       },
 
+      newText:'',
+
+      error : ''
 
     }
   },
 
   methods : {
-
+  
+    deleteTask(indice){
+      this.todoList.splice(indice,1)
+      
+    },
+    
     addTask(){
-      this.todoList.unshift(this.newTask)
-      console.log(this.todoList)
       
-      this.newTask= ''
-      
+      if(this.newText.length >= 4){
+        this.newTask ={
+          text : this.newText,
+          isDone :false
+        }
+
+        this.todoList.unshift(this.newTask)
+        this.newText= '';
+        this.error= '';
+        console.log(this.todoList)
+
+      } else{
+        this.error = 'Errore compilazione! La parola richiede almeno 4 lettere'
+        this.newText= '';
+      }
+
     }
-  }
+
+  },
+
 
 
 }).mount('#app')
